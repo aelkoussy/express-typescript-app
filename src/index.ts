@@ -16,3 +16,9 @@ app.post('/submit-quest', validateQuest, finalizeQuest);
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
+
+
+// Notes:
+
+// for the access conditions array, it should not be submitted but rather stored on our backend and then we check against them
+// (otherwise the user can alter the conditions) - for the user claims (user_data), I assume you mean they come from a JWT (which is not the case for the quest)
