@@ -241,7 +241,6 @@ describe('POST /submit-quest', () => {
             .set('Accept', 'application/json');
 
         expect(response.status).toBe(200);
-        console.log(response.body.score)
         expect(response.body.score).toBeGreaterThanOrEqual(5);
         expect(response.body.status).toBe('success');
     });
